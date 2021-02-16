@@ -12,4 +12,8 @@ export class HomePage {
 
   }
 
+  login() {
+    this.navCtrl.setRoot('CategoriasPage') // *laze loadind nevando pelo nome da pagina (string) 
+
+  }
 }
