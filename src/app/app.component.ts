@@ -22,6 +22,7 @@ export class MyApp {
       { title: 'Profile', component: 'ProfilePage' },
       { title: 'Categorias', component: 'CategoriasPage' }
       
+      
     ];
 
   }
