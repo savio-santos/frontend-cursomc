@@ -35,8 +35,7 @@ import { AuthInterceptorProvider } from '../interceptors/auth-interceptor';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     CategoriaService,
-    AuthInterceptorProvider,
-    //inclusao de atorização dever ser antes do tratamento de error
+    AuthInterceptorProvider, //inclusao de atorização dever ser antes do tratamento de error
     ErrorInterceptorProvider,
     AuthService,
     StorageService,
