@@ -20,10 +20,21 @@ export class AuthService {
             creds,
             {
                 observe: 'response',
+                responseType: 'text' //evitando erro de perse
+            }
+        )
+    }
+
+    refreshToken() {
+        return this.http.post(
+            `${API_CONFIG.baseUrl}/auth/refresh_token`,{},
+            {
+                observe: 'response',
                 responseType: 'text'
             }
         )
     }
+
 
     successfulLogin(authorizationValue: string) {
         let tok = authorizationValue.substring(7);
@@ -33,7 +44,8 @@ export class AuthService {
         };
         this.storage.setlocalUser(user);
     }
-    logout(){
+
+    logout() {
         this.storage.setlocalUser(null);
     }
 
