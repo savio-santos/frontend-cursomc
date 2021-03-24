@@ -9,7 +9,7 @@ import { StorageService } from "./storage.service";
 @Injectable()
 export class AuthService {
     jwtHelper: JwtHelper = new JwtHelper();
-    //rode npm install @angular/http@latest 
+    //rode npm install @angular/http@latest caso de error
 
     constructor(public http: HttpClient, public storage: StorageService) {
 
@@ -20,7 +20,7 @@ export class AuthService {
             creds,
             {
                 observe: 'response',
-                responseType: 'text' //evitando erro de perse
+                responseType: 'text' //evitando erro de parse
             }
         )
     }
