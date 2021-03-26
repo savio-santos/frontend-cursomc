@@ -18,4 +18,16 @@ export class ClienteService {
         let url = `${API_CONFIG.buketBaseUrl}/cp${id}.jpg`;
         return this.http.get(url, { responseType: 'blob' }) // responseType:'blob' tipo binario data
     }
+
+    insert(obj: ClienteDTO){
+        return this.http.post(
+            `${API_CONFIG.baseUrl}/clientes`,obj,
+            {
+                observe:'response',
+                responseType:'text'
+            }
+        );
+    }
+
+
 }

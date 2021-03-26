@@ -33,7 +33,7 @@
 
     <ion-item>
       <ion-label stacked>CPF ou CNPJ</ion-label>
-      <ion-input formControlName="cpfOuCnpj" type="text"></ion-input>
+      <ion-input formControlName="cpfOuCnpj" type="text" maxlength="14"></ion-input>
     </ion-item>
     <p class="danger" *ngIf="formGroup.controls.cpfOuCnpj.dirty && formGroup.controls.cpfOuCnpj.errors" margin-left>Valor invalido</p>
 
