@@ -41,6 +41,11 @@ export class ProdutoPage {
         );
     }
   }
+
+  showDetail() {
+    this.navCtrl.push('ProdutoDetailPage');
+  }
+
 }
 
 
