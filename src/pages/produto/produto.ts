@@ -35,15 +35,15 @@ export class ProdutoPage {
       let item = this.items[i];
       this.produtoService.getSmallImageFromBucket(item.id)
         .subscribe(response => {
-          item.imgUrl = `${API_CONFIG.buketBaseUrl}/prod${item.id}-small.jpg`;
+          item.imageUrl = `${API_CONFIG.buketBaseUrl}/prod${item.id}-small.jpg`;
 
         }, error => { }
         );
     }
   }
 
-  showDetail() {
-    this.navCtrl.push('ProdutoDetailPage');
+  showDetail(produto_id:string) {
+    this.navCtrl.push('ProdutoDetailPage',{produto_id: produto_id});
   }
 
 }
