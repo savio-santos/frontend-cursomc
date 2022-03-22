@@ -13,6 +13,7 @@ import { StorageService } from '../services/storage.service';
 import { ClienteService } from '../services/domain/cliente.service';
 import { AuthInterceptorProvider } from '../interceptors/auth-interceptor';
 import { ProdutoService } from '../services/domain/produto.service';
+import { CartService } from '../services/domain/cart.service';
 
 @NgModule({
   declarations: [
@@ -36,13 +37,13 @@ import { ProdutoService } from '../services/domain/produto.service';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     CategoriaService,
-    AuthInterceptorProvider, //inclusao de atorização dever ser antes do tratamento de error
+    AuthInterceptorProvider, //inclusao de autorização dever ser antes do tratamento de error
     ErrorInterceptorProvider,
     AuthService,
     StorageService,
     ClienteService,
-    ProdutoService
-    
+    ProdutoService,
+    CartService    
   ]
 })
 export class AppModule {}

@@ -18,4 +18,4 @@ export class CategoriaService{
 }
 
 /*Observable=> incapsula o mecanimo de requisação assinc 
-possibilando fazer a requição e aguardar resposta */
+possibilando fazer a requisição e aguardar resposta */
